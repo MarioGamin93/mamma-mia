@@ -16,8 +16,8 @@ const Carrito = () => {
     //* nombramos una variable y la igualamos con el estado carrito
     let nuevoCarrito = carrito
 
-    //* nombramos una variable como cantidad para ir aumentando la cantidad a 1 cada vez que le demos click al boton
-    let cantidad = pizza.cantidad +=1
+    //*aqui usamos la propiedad pizza.cantidad a 1 cada vez que le demos click al boton
+    pizza.cantidad +=1
 
     //* aqui igualamos el indice del carrito con la pizza 
     nuevoCarrito[index] = pizza
@@ -29,13 +29,13 @@ const Carrito = () => {
     
     console.log(carrito)
 
-    //* aqui actualizamos el estado incrementar llamando la variable cantidad
-    setIncrementar(cantidad)
+    //* aqui actualizamos el estado incrementar llamando la pripiedad pizza.cantidad
+    setIncrementar(pizza.cantidad)
 
     //* aqui tenemos una variable de acumulador que comienza con 0, luego la usaremos en el ciclo para ir multiplicando el precio de la pizza con la cantidad
     let acumulador = 0;
       carrito.forEach((pizza) => {
-        acumulador += pizza.price*cantidad;
+        acumulador += pizza.price*pizza.cantidad;
         console.log(acumulador);
       });
 
